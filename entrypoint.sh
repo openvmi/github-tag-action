@@ -47,7 +47,7 @@ else
 fi
 echo  "tag_prefix: ${tag_prefix}"
 
-base_tag="${tag_prefix}v.${base_version}.0"
+base_tag="${tag_prefix}v${base_version}.0"
 echo "base tag: ${base_tag}"
 
 
