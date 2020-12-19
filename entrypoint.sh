@@ -31,7 +31,7 @@ echo -e "\tVERBOSE: ${verbose}"
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 echo "current branch: ${current_branch}"
 
-if [[ ! -f 'version' ]];then
+if [[ ! -f "version" ]];then
     echo 'version file does not exist'
     echo 'quite the tag action'
     exit 1
@@ -40,7 +40,7 @@ fi
 base_version=$(cat version)
 echo "base version: ${base_version}"
 
-if [[ '${current_branch}' == "master" ]] || [[ '${current_branch}' == "main" ]]; then
+if [[ "${current_branch}" == "master" ]] || [[ "${current_branch}" == "main" ]]; then
     tag_prefix="release"
 else
     tag_prefix="${current_branch}"
@@ -70,7 +70,7 @@ fi
 #tag_commit=${base_tag_commit}
 #
 ## get current commit hash
-#commit=$(git rev-parse HEAD)
+commit=$(git rev-parse HEAD)
 
 #if [ "$tag_commit" == "$commit" ]; then
 #    echo "No new commits since previous tag. Skipping..."
