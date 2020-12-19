@@ -41,9 +41,9 @@ base_version=$(cat version)
 echo "base version: ${base_version}"
 
 if [[ "${current_branch}" == "master" ]] || [[ "${current_branch}" == "main" ]]; then
-    tag_prefix="release"
+    tag_prefix="release-"
 else
-    tag_prefix="${current_branch}"
+    tag_prefix="${current_branch}-"
 fi
 echo  "tag_prefix: ${tag_prefix}"
 
