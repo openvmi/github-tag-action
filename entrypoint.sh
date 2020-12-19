@@ -55,8 +55,10 @@ git fetch --tags
 
 if [ ! $(git tag --merged HEAD -l "${base_tag}") ]; then
     count_commits='0'
+    echo "count commits: no base tag, so count_commits is 0"
 else
     count_commits=$(git rev-list ${base_tag}..${current_branch} --count)
+    echo "count commits: ${count_commits} based on ${base_tag}"
 fi
 
 
