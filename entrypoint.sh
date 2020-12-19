@@ -195,7 +195,7 @@ commit=$(git rev-parse HEAD)
 
 
 # push new tag the current branch
-new="${tag_prifix}v${base_version}.${count_commits}"
+new="${tag_prefix}v${base_version}.${count_commits}"
 echo "new version: $new"
 echo ::set-output name=tag::$new
 
